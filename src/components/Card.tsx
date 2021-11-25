@@ -21,6 +21,7 @@ interface CardProps {
 }
 
 export function Card({ data, viewImage }: CardProps): JSX.Element {
+
   const [isLoading, setIsLoading] = useState(true);
 
   return (

@@ -85,7 +85,7 @@ const FileInputBase: ForwardRefRenderFunction<
       const formData = new FormData();
 
       formData.append(event.target.name, event.target.files[0]);
-      formData.append('key', process.env.NEXT_PUBLIC_IMGBB_API_KEY);
+      formData.append('key', 'fa91d03134ecd83f5a0f8743371b6e95');
 
       const { CancelToken } = axios;
       const source = CancelToken.source();

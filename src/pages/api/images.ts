@@ -2,7 +2,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fauna from 'faunadb';
 
 const { query } = fauna;
-const client = new fauna.Client({ secret: process.env.FAUNA_API_KEY });
+// const client = new fauna.Client({ secret: process.env.FAUNA_API_KEY });
+const client = new fauna.Client({ secret: 'fnAEWyZ6nSACT3kYSRKwzTfYGi-J5PUZeoZ7SBHj' });
 
 interface ImagesQueryResponse {
   after?: {
@@ -72,6 +73,7 @@ export default async function handler(
           ts: item.ts,
           id: item.ref.id,
         }));
+        // console.log(formattedData);
 
         return res.json({
           data: formattedData,
